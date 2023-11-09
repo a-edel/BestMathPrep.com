@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	   <meta charset="UTF-8">
+       <title>Subscribe | Best Math Prep</title>       
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+       <link rel="stylesheet" href="jquery-ui.min.css">
+       <link rel="stylesheet" href="style.css">
+       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+       <script src="jquery-ui.min.js"></script>
+       <script src="subscribe.js"></script>       
+       <script>
+	    	$(document).ready(function(){
+	    		$("#datepicker").datepicker({
+	        		dateFormat: 'dd/mm/yyyy',
+				    changeMonth: true,
+	        		changeYear: true
+	    		});
+			});
+		</script> 
+		<script>
+		$(document).ready(function() {	
+			$("#info").click(function() { 
+				$("#dialog").dialog();
+			});
+		});
+	</script>       
+   </head>
+
+   <body id="subscribe">
+   	  <!-- beginning of header -->
+   	  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light ">
+			<div class="container-fluid">
+		    	<a class="navbar-brand" href="index.html"><a class="btn button logo" href="index.html">Best Math Prep</a>
+		    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      		<span class="navbar-toggler-icon"></span>
+		    	</button>
+		    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    		<ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-fill w-100">
+			        	<li class="nav-item">
+			          		<a class="nav-link"  href="index.html">Home</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="index.html#instructions">Instructions</a>
+			        	</li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="lessons.html">Lessons</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="practice-tests.html">Practice Tests</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="map.html">Sunday Testing Sites Map</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="buy-a-calculator.html">Buy A Calculator</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link active" aria-current="page" href="subscribe.html">Subscribe</a>
+				        </li>		        
+		       		</ul>
+		    	</div>
+		  	</div>
+	  </nav>
+	  <!-- end of header -->
+	  <br>
+	  <br>
+	  <br>
+	  <div class="center form">
+	    <h1 style="font-size:75px; font-family: Comic Sans MS">Subscribe Now!</h1><br>
+	    <h3>Subscribe to receive important emails about the SAT<br>and to be notified when new lessons and content are added to this site.</h3><br>
+	    <label for="name">Name:</label>
+	        <input type="text" name="name" id="name">
+	        <div id="nameError" class="error">&nbsp;</div><br>
+	    <label for="email">E-Mail:</label>
+	        <input type="text" name="email" id="email">
+	        <div  id="emailError" class="error">&nbsp;</div><br>
+	    <label for="phone">Phone Number:</label>
+	        <input type="text" name="phone" id="phone">
+	        <div  id="phoneError" class="error">&nbsp;</div><br>
+	    <label for="sat">Planned Date of SAT <sup id="info">&#8505;</sup> :</label>
+	        <input type="text" name="sat" id="datepicker">
+	        <div id="satError" class="error">&nbsp;</div><br><br>
+	    <input type="button" id="subscribeButton" class="btn button" value=" Subscribe ">
+      </div>
+      <br>
+      <br>
+      <br>
+      <div id="dialog" title="Why We Need to Know" style="display: none;">
+          <p>It is important for us to know when you are taking the SAT so we know when to and when not to send you emails.
+          	This way, you will receive emails from us when they are helpful to you, and you will never feel like you are being spammed.</p>
+      </div>
+      <!-- beginning of footer -->
+		<footer>
+		 	<p><a id="terms" href="terms-of-use.html">Terms of Use</a></p>
+		 	<p>&#169;2021 Best Math Prep. All rights reserved.</p>
+		 	<p id="disclaimer">SAT<sup>&reg</sup> is a registered trademark of the College Entrance Examination Board™.
+		 		 The College Entrance Examination Board™ does not endorse, nor is it affiliated in any way with the owner or any content of this site.</p>
+		 </footer>
+		 <!-- end of footer -->	
+   </body>
+</html>

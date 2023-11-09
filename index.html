@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--Website Final Project - Abraham Edelstein -->
+<html lang="en">
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Home | Instructions | Best Math Prep</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>		
+		<script>
+		$(document).ready(function(){
+			var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
+			          "id=73335460@N04&format=json&jsoncallback=?&tags=ratios";
+		
+			$.getJSON(url, function(data){
+				var html = "";
+			
+				$.each(data.items, function(i, item){	
+					
+					html += item.description;
+					html = html.replace(
+						"<p><a href=\"https://www.flickr.com/people/73335460@N04/\">" +
+						"pinku54<\/a> posted a photo:<\/p>", "");
+					html = html.replace(
+						"<p><a href=\"http://www.mathcaptain.com/number-sense/ratios.html\" rel=\"nofollow\">Simplifying ratios<\/a>", "");
+					html = html.replace(
+						"A ratio of two quantities can be expressed as a fraction also. For example, the ratio 3:4 can be expressed as 34 and vice versa.If two given ratios are the same, they are said to be in proportion. A ratio gives the relationship between two or more values (or) shows the relative size of two or more numbers.", "");
+					
+				});
+				$("#ratios").html(html);
+			});	
+		});
+    </script>
+	</head>
+
+	<body>
+		<!-- beginning of header -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+		    	<a class="navbar-brand" href="index.html"><a class="btn button logo" href="#">Best Math Prep</a>
+		    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      		<span class="navbar-toggler-icon"></span>
+		    	</button>
+		    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    		<ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-fill w-100">
+			        	<li class="nav-item">
+			          		<a class="nav-link active" aria-current="page" href="#">Home</a>
+			        	</li>
+			        	<li class="nav-item">
+			          		<a class="nav-link" href="#instructions">Instructions</a>
+			        	</li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="lessons.html">Lessons</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="practice-tests.html">Practice Tests</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="map.html">Sunday Testing Sites Map</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="buy-a-calculator.html">Buy A Calculator</a>
+				        </li>
+				        <li class="nav-item">
+				          <a class="nav-link" href="subscribe.html">Subscribe</a>
+				        </li>		        
+		       		</ul>
+		    	</div>
+		  	</div>
+		</nav>
+		<!-- end of header -->
+				
+		<div class="card bg-dark text-white text-center d-flex flex-column justify-content-center align-items-center">
+			<img src="landing-page-pic.png" class="card-img" height="640px">
+				<div class="card-img-overlay">
+					<br>
+					<br>
+					<br>
+			    	<h1 class="card-title" id="site-title">Best Math Prep</h5>
+			    	<h2 class="card-titile" id="site-title-line-2">for the SAT<sup>&reg</sup></p>
+			    	<h3 class="card-title" id="slogan">Study the Right Way</p>
+			    	<br>
+			    	<div class="center">
+						<a href="#instructions" class="btn button btn-lg">How It Works</a>
+					</div>
+			  	</div>
+		</div>
+		
+		<div id="instructions">
+			<br>
+			<br>
+			<br>
+			<h2 class="header">Instructions</h2>
+			<br>
+			<p class="instructions-points">
+				This course is for someone who is aiming for a really high score.  
+				It covers almost anything possible you will see on the SAT. 
+				(I only say almost because the SAT might ask a question on a topic that was not asked in the past.  
+				However, I will do my best to cover any topic that has been asked in the past, including questions that I have only seen on the SATs I took.)
+				Here are the instructions for the lessons in this course:
+			</p>
+			<ul class="instructions-points">
+				<li>Most lessons begin with some background information.</li>
+				<li>When you get to a question, remember the question number.  For example, if you see 1. Question 12, remember 12.</li>
+				<li>Click on the question and a new tab will open.</li>
+				<li>Go to the question number that you remembered and try to solve it.</li>
+				<li>Once you think you got the correct answer, return to this site and hover over the black circle under the question to reveal the correct answer.</li>
+				<li>If you got the answer wrong or you got stuck, read the explanation under the correct answer so you will know how to solve questions like it in the future.</li>
+				<li>If you got it, great!  You might still want to read my explanation for any tips or for a quicker way to solve.</li>
+			</ul>
+			<p class="instructions-points">Sometimes following the question, there will be other questions labeled as similar questions:</p>
+			<ul class="instructions-points">
+				<li>Those questions are in fact very similar to the original question and should be done if you need more practice in that topic.</li>
+				<li>If you are having trouble on one of the similar questions, review the original question and find the similarities to the question you are stuck on.</li>
+				<li>This is not a waste of time.  Not only will it help you answer the question, it will also help you pick up the patterns in test questions.</li>
+			</ul>
+			<p class="instructions-points">Calculator:</p>
+			<ul class="instructions-points">
+				<li>Whether or not you can use a calculator for each question is indicated by an icon on top of the linked question page.</li>
+			</ul>
+			<p class="instructions-points">Note:</p>
+			<ul class="instructions-points">
+				<li>If for any question you do not understand one of the answer choices, don't worry. 
+					Obviously, that choice will not be the correct answer since it was not taught yet.
+					You will understand it by the time you complete this course.</li>
+			</ul>	
+			<p class="instructions-points">Display issues:</p>
+			<ul class="instructions-points">
+				<li>All browsers and screen configurations are not necessarily the same.  If the answer circles or equations are not lining up, adjust the zoom in your browser settings or your computer settings.
+					This site has been optimized for Google Chrome at 100% zoom.</li>
+			</ul>
+			<p class="instructions-points">Good luck!!</p>
+			<div class="center">
+				<a href="lessons.html" class="btn btn-lg ">Start Prep</a>
+			</div>
+			<br>
+			<br>
+			<br>
+		 </div>
+		 <br>
+		 <br>
+		 <div id="lessons-carousel-introduction" class="center">Do you know...</div>
+		 <br>
+		 <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-ride="carousel">
+		 	<div class="carousel-inner">
+			  	<div class="carousel-item active">
+			      <img src="basic-graph-reading.png" class="d-block w-100" alt="Basic Graph Reading">
+			      <div class="carousel-caption d-none d-md-block">
+			      	<h3>Basic Graph Reading</h3>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <img src="percents.png" class="d-block w-100" alt="Percents">
+			      <div class="carousel-caption d-none d-md-block">
+			      	<h3>Percents</h3>
+			      </div>
+			    </div>
+			    <div class="carousel-item">
+			      <div id="ratios" class="center" style="padding-top:80px"></div>		      
+			      <div class="carousel-caption">				        
+			      </div>
+			      <h3 class="center" style="padding-top:60px">Ratios</h3>
+			    </div>			    			    
+			 </div>
+			 <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Previous</span>
+			  </button>
+			  <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="visually-hidden">Next</span>
+			  </button>
+		 </div>
+		 
+		 <br>
+		 <br>
+		 <br>
+		 <div id="lessons-carousel-conclusion" class="center">No? What are you waiting for?</div>
+		 <br>
+		 <div class="center">
+			<a href="lessons.html" class="btn button btn-lg ">Start Prep</a>
+		 </div>
+		 <br>	
+		 <br>
+		 <br>	 
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		 <!-- beginning of footer -->
+		 <footer>
+		 	<p><a id="terms" href="terms-of-use.html">Terms of Use</a></p>
+		 	<p>&#169;2021 Best Math Prep. All rights reserved.</p>
+		 	<p id="disclaimer">SAT<sup>&reg</sup> is a registered trademark of the College Entrance Examination Board™.
+		 		 The College Entrance Examination Board™ does not endorse, nor is it affiliated in any way with the owner or any content of this site.</p>
+		 </footer>
+		 <!-- end of footer -->	
+	</body>
+	
+</html>
